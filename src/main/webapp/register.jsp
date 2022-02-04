@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Sign up now! | eCmmerce  </title>
+<title>Sign up now! | eCommerce  </title>
 </head>
 <body>
 
