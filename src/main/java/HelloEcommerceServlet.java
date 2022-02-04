@@ -46,6 +46,7 @@ public class HelloEcommerceServlet extends HttpServlet {
 		writer.println("<h1>Hello " + yourName + "</h1>");
 		writer.close();
 		doGet(request, response);
+		
 	}
 
 }
