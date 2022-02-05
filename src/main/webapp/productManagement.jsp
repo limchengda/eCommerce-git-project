@@ -9,13 +9,12 @@
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
 	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
 	crossorigin="anonymous">
-	
+
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 </head>
 <body>
-
-<div class="row">
+	<div class="row">
 		<div class="container">
 			<h3 class="text-center">List of Products</h3>
 			<hr>
@@ -30,31 +29,33 @@
 				<thead>
 					<tr>
 						<th>Product</th>
-						<th>Price(SGD$)</th>
+						<th>Price</th>
 						<th>Description</th>
 						<th>Status</th>
 						<th>Actions</th>
 					</tr>
 				</thead>
-				<!-- Pass in the list of users receive via the Servlet's response to a loop
--->
+				<!-- Pass in the list of users receive via the Servlets response to a loop-->
 				<tbody>
-					<c:forEach var="products" items="${listProducts}">
+					<c:forEach var="Products" items="${listProducts}">
 						<!-- For each user in the database, display their information accordingly -->
 						<tr>
-							<td><c:out value="${products.product}" /></td>
-							<td><c:out value="${products.price}" /></td>
-							<td><c:out value="${products.description}" /></td>
-							<td><c:out value="${products.status}" /></td>
+							<td><c:out value="${Products.product}" /></td>
+							<td><c:out value="${Products.price}" /></td>
+							<td><c:out value="${Products.description}" /></td>
+							<td><c:out value="${Products.status}" /></td>
 							<!-- For each user in the database, Edit/Delete buttons which invokes the edit/delete functions -->
-							<td><a href="edit?product=<c:out value='${products.product}'/>">Edit</a>
-								&nbsp;&nbsp;&nbsp;&nbsp; <a href="delete?product=<c:out value='${products.product}' />">Delete</a></td>
+							<td><a
+								href="edit?product=<c:out value='${Products.product}'
+								/>">Edit</a>
+								&nbsp;&nbsp;&nbsp;&nbsp; 
+								<a href="delete?product=<c:out 
+								value='${Products.product}' />">Delete</a></td>
 						</tr>
 					</c:forEach>
 				</tbody>
 			</table>
 		</div>
 	</div>
-	
 </body>
 </html>
