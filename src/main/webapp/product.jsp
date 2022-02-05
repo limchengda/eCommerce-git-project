@@ -8,7 +8,7 @@
 </head>
 <body>
 	<form action="ProductServlet" method="post">
-		Product Name: <input type="text" name="name"> 
+		Product Name: <input type="text" name="product"> 
 		Price(SGD$): <input type="text" name="price"> 
 		Description: <input type="text" name="description"> 
 		Status: <select name="status">

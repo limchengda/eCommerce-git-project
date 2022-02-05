@@ -41,7 +41,7 @@ public class ProductServlet extends HttpServlet {
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
 
-		String n = request.getParameter("name");
+		String n = request.getParameter("product");
 		String p = request.getParameter("price");
 		String e = request.getParameter("description");
 		String c = request.getParameter("status");

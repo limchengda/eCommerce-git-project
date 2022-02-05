@@ -28,8 +28,7 @@ public class ProductListServlet extends HttpServlet {
 
 	// Step 2: Prepare list of SQL prepared statements to perform CRUD to our
 	// database
-	private static final String INSERT_PRODUCTS_SQL = "INSERT INTO ListingDetails"
-			+ " (product, price, description, status) VALUES " + " (?, ?, ?);";
+	private static final String INSERT_PRODUCTS_SQL = "INSERT INTO ListingDetails" + " (product, price, description, status) VALUES " + " (?, ?, ?);";
 	private static final String SELECT_PRODUCTS_BY_ID = "select product,price,description,status from ListingDetails where product =?";
 	private static final String SELECT_ALL_PRODUCTS = "select * from ListingDetails ";
 	private static final String DELETE_PRODUCTS_SQL = "delete from ListingDetails where product = ?;";
@@ -66,26 +65,6 @@ public class ProductListServlet extends HttpServlet {
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
-		// Step 4: Depending on the request servlet path, determine the function to
-		// invoke using the follow switch statement.
-		String action = request.getServletPath();
-		try {
-			switch (action) {
-			case "/insert":
-				break;
-			case "/delete":
-				break;
-			case "/edit":
-				break;
-			case "/update":
-				break;
-			default:
-				listProducts(request, response);
-				break;
-			}
-		} catch (SQLException ex) {
-			throw new ServletException(ex);
-		}
 	}
 
 	/**
@@ -98,7 +77,7 @@ public class ProductListServlet extends HttpServlet {
 		
 	}
 	//Step 5: listUsers function to connect to the database and retrieve all users records
-			private void listProducts(HttpServletRequest request, HttpServletResponse response) 
+			private void listProducts(HttpServletRequest request, HttpServletResponse response)
 					throws SQLException, IOException, ServletException
 			{
 			List <ProductList> products = new ArrayList <>();
