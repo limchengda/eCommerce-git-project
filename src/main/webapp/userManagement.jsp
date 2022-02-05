@@ -18,11 +18,6 @@
 		<div class="container">
 			<h3 class="text-center">List of Users</h3>
 			<hr>
-			<div class="container text-left">
-				<!-- Add new user button redirects to the register.jsp page -->
-				<a href="<%=request.getContextPath()%>/register.jsp"
-					class="btn btnsuccess">Add New User</a>
-			</div>
 			<br>
 			<!-- Create a table to list out all current users information -->
 			<table class="table">
@@ -48,7 +43,8 @@ information accordingly -->
 							<td><c:out value="${user.gender}" /></td>
 							<!-- For each user in the database, Edit/Delete
 buttons which invokes the edit/delete functions -->
-							<td><a href="edit?username=<c:out value='${user.username}'
+							<td><a
+								href="edit?username=<c:out value='${user.username}'
 />">Edit</a>
 								&nbsp;&nbsp;&nbsp;&nbsp; <a
 								href="delete?username=<c:out
@@ -58,6 +54,12 @@ value='${user.username}' />">Delete</a></td>
 				</tbody>
 			</table>
 		</div>
+	</div>
+
+	<div class="container text-left">
+		<!-- Add new user button redirects to the register.jsp page -->
+		<a href="<%=request.getContextPath()%>/register.jsp"
+			class="btn btnsuccess">Add New User</a>
 	</div>
 
 </body>
