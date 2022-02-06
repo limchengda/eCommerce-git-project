@@ -16,7 +16,7 @@
 
 	<div class="row">
 		<div class="container">
-			<h3 class="text-center">List of Users</h3>
+			<h3 class="text-center">List of User account</h3>
 			<hr>
 			<br>
 			<!-- Create a table to list out all current users information -->
