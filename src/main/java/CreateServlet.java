@@ -69,6 +69,7 @@ public class CreateServlet extends HttpServlet {
 			if (i > 0) {
 				PrintWriter writer = response.getWriter();
 				writer.println("<h1>" + "You have successfully registered a product!" + "</h1>");
+				response.sendRedirect("http://localhost:8080/eCommerceJavaEE/ProductsServlet/dashboard");
 				writer.close();
 			}
 		}
