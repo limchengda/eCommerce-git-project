@@ -14,13 +14,13 @@ import javax.servlet.http.HttpServletResponse;
  * Servlet implementation class ProductServlet
  */
 @WebServlet("/ProductServlet")
-public class ProductServlet extends HttpServlet {
+public class CreateServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ProductServlet() {
+    public CreateServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -49,8 +49,7 @@ public class ProductServlet extends HttpServlet {
 		// Step 3: attempt connection to database using JDBC, you can change the username and password accordingly using the phpMyAdmin > User Account dashboard
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/listingdetails", "root",
-					"password");
+			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/listingdetails", "root", "password");
 
 			// Step 4: implement the sql query using prepared statement
 
@@ -70,6 +69,7 @@ public class ProductServlet extends HttpServlet {
 			if (i > 0) {
 				PrintWriter writer = response.getWriter();
 				writer.println("<h1>" + "You have successfully registered a product!" + "</h1>");
+				response.sendRedirect("http://localhost:8080/eCommerceJavaEE/ProductsServlet/dashboard");
 				writer.close();
 			}
 		}
