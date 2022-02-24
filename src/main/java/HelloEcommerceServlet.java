@@ -43,7 +43,7 @@ public class HelloEcommerceServlet extends HttpServlet {
 		// Step 2: Initialize a PrintWriter object to return the html values via the
 		// response
 		PrintWriter writer = response.getWriter();
-		writer.println("<h1>Hello " + yourName + "</h1>");
+		writer.println("<h1>Hello! " + yourName + "</h1>");
 		writer.close();
 		doGet(request, response);
 		
