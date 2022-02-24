@@ -20,7 +20,7 @@
 
 	<servlet-mapping>
 		<servlet-name>ProductsServlet</servlet-name>
-		<url-pattern>/ProductsServlet/dashboard</url-pattern>
+		<url-pattern>/ProductsServlet/dashboard</url-pattern> 
 		<url-pattern>/ProductsServlet/edit</url-pattern>
 		<url-pattern>/ProductsServlet/update</url-pattern>
 		<url-pattern>/ProductsServlet/delete</url-pattern>
