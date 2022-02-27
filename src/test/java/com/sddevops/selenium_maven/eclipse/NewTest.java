@@ -16,27 +16,27 @@ public class NewTest {
 	  @Test
 	  public void checkId() {
 		  //Load website as a new page
-		  webDriver.navigate().to("https://devopsessentials.github.io");
-		  WebElement we =  webDriver.findElement(By.id("content"));
+		  webDriver.navigate().to("http://localhost:8090/eCommerceJavaEE/ProductsServlet/dashboard");
+//		  WebElement we =  webDriver.findElement(By.id("content"));
 		  
-		  System.out.println("id we: "+we.getAttribute("role"));
-		  Assert.assertEquals(we.getAttribute("role"), "contentinfo");
+//		  System.out.println("id we: "+we.getAttribute("role"));
+//		  Assert.assertEquals(we.getAttribute("role"), "contentinfo");
 	  }
 	  @Test
 	  public void checkTitle() {
 		  //Load website as a new page
-		  webDriver.navigate().to("https://devopsessentials.github.io");
+		  webDriver.navigate().to("http://localhost:8090/eCommerceJavaEE/ProductsServlet/dashboard");
 		  
 		  //Assert the title to check that we are indeed in the correct website
-		  Assert.assertEquals(webDriver.getTitle(), "Home");
+		  Assert.assertEquals(webDriver.getTitle(), "Product Management");
 		  
 		  System.out.println("title: "+webDriver.getTitle());
 		  
 		  //Retrieve link using it's class name and click on it
-		  webDriver.findElement(By.className("link")).click();
+		  webDriver.findElement(By.xpath("/html/body/div/div/table/tbody/tr[1]/td[5]/a[2]")).click();
 
 		  //Assert the new title to check that the title contain Wikipedia and the button had successfully bring us to the new page
-		  Assert.assertTrue(webDriver.getTitle().contains("Wikipedia"));
+//		  Assert.assertTrue(webDriver.getTitle().contains("Wikipedia"));
 		  System.out.println("new title: "+webDriver.getTitle());
 	  }
 	  
